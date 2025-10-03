@@ -1,26 +1,26 @@
-# Preparing usb medium
+# Preparing USB medium
 
-_Important. simply copying image onto an usb is not a correct way of doing it so please don't do it and then open issues about it not working_
+_Important. Simply copying image onto an USB is not a correct way of doing it, so please don't do it and then open issues about it not working._
 
 <details><summary>
 
-### If your usb/sd card was cheap please read this
+### If your USB/SD card was cheap please read this
 </summary>
 
-this kinds of devices tend to report fake capacity
-which might cause issues with system flashed on them
+These kinds of devices tend to report fake capacity,
+which might cause issues with system flashed on them.
 
-please check it's real capacity with [f3 tools](https://fight-flash-fraud.readthedocs.io/en/latest/introduction.html)
-or similar
+Please check it's real capacity with [f3 tools](https://fight-flash-fraud.readthedocs.io/en/latest/introduction.html)
+or similar.
 
 </details>
 
-## Flashing on Chromebook or Linux
-download the image
+## Flashing on Chromebook or Linux:
+Download the image,
 
 using your browser, you can find image for your specific device [here]()
 
-find the name.img.gz (it can be skipped if you already know file location)
+Find the name.img.gz (it can be skipped if you already know the file location)
 ```
 find / -name *.img.gz 2> /dev/null
 ```
@@ -31,15 +31,15 @@ cd to the directory
 cd path/to/dir
 ```
 
-unpack the image
+Unpack the image
 ```
 gunzip name.img.gz
 ```
-find your usb device
+Find your USB device
 ```
 lsblk
 ```
-_output:_
+_Output:_
 ```
 luk@chluk /mnt $ lsblk
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
@@ -51,28 +51,28 @@ sda      179:0    0 116,5G  0 disk <-- your usb
 ├─sda4  179:4    0 108,5G  0 part /
 └─sda5  179:5    0   7,5G  0 part [SWAP]
 ```
-_Tip. just find a device with same size as ur usb_
-_Note. you can also run the command befor and after plugging in the device to be sure_
+_Tip. Just find a device with same size as your USB._
+_Note. You can also run the command before and after plugging in the device to be sure._
 
-_Note. your partitions might be different_
+_Note. Your partitions might be different._
 
-flash the image
+Flash the image
 ```
 sudo dd status=progress if=name.img of=/dev/<target-device>
 ```
-_Note. replace <target-device> with you usb name from the step above_
-_Warning. this operation will wipe your sd/usb drive_
+_Note. Replace <target-device> with your USB name from the step above, Note that it needs to be the sda part, not the sda1 part._
+_Warning. This operation will wipe your SD/USB drive._
 
-usb should be ready to go 🎉
+Your USB should be ready to go 🎉
 
 _Note. if there is any problem with any command just add sudo before it_
 
 ## Flashing on any other system
 
-for simplicity just use [raspberry pi imager](https://www.raspberrypi.com/software/)
+For simplicity just use [raspberry pi imager](https://www.raspberrypi.com/software/)
 
 ![rpi-imager](./assets/rpi-imager.png)
 
-if you use diffrent software you are on your own, it should work but **do not create and issue about it not working**
+If you use different software you are on your own, it should work but **do not create and issue about it not working**
 
-_Note. for most you will need to unpack name.img.gz file using archive tool_
+_Note. For most you will need to unpack name.img.gz file using archive tool_

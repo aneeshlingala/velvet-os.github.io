@@ -1,24 +1,24 @@
-_Q.what's the login and passowrd_
+_Q. What's the login and password?_
 
-A. login "linux" and password "changeme". you can [change login](./postinst/change-names.md)
+A. The login is "linux" with the password "changeme". You can [change login](./postinst/change-names.md)
 
-_Q. how do i boot image_
+_Q. How do i boot the image?_
 
-A. chekc out [here](./first-steps.md)
+A. Check out [here](./first-steps.md)
 
-_Q. how do i install the image onto chromebook / there is no installer_
+_Q. How do i install the image onto chromebook / There is no installer_
 
-A. [look here](./chromebooks/readme.md) (at the bottom), *make sure to read eveything*
+A. [look here](./chromebooks/readme.md) (at the bottom), *Make sure to read everything*
 
 
-_Q. my desktop is weird, i want diffrent one_
+_Q. My desktop is weird, i want different one_
 
-A. this is to be expected, you can [change it](./postinst/switch-de.md)
+A. This is to be expected, you can [change it](./postinst/switch-de.md)
 
-_Q. is there ${image not listed inside release} image_
+_Q. Is there ${image not listed inside release} image?_
 
-A. not really, unless it's available on earlier releases
+A. Not really, unless it's available on earlier releases.
 
-- when it comes to *ubuntu jammy* - you may [request an image](https://github.com/hexdump0815/imagebuilder/issues/129) (but it will take unspecified ammount of time)
-- when it comes to *debian-derrivatives* (not ubuntu)(like kali/raspbian) - you may try adding distro repo to your sources.list, [like here](https://github.com/hexdump0815/imagebuilder/issues/225#issuecomment-2162170254) *(do not open issues about it, discussions are fine for this)*
-- *unrealeated distro* - build it yourself, this framework should have all ya need in scripts directory if you know how to bootstrap your distro *(do not open issues about it, this is out of scope of the project)*
+- When it comes to *Ubuntu jammy* - you may [request an image](https://github.com/hexdump0815/imagebuilder/issues/129) (but it will take unspecified amount of time)
+- When it comes to *Debian-derivatives* (not Ubuntu)(like Kali/Raspbian) - You may try adding distro repo to your sources.list, [like here](https://github.com/hexdump0815/imagebuilder/issues/225#issuecomment-2162170254) *(do not open issues about it, discussions are fine for this)*
+- *Unrelated distro* - Build it yourself, this framework should have all ya need in scripts directory if you know how to bootstrap your distro. *(do not open issues about it, this is out of scope of the project)*

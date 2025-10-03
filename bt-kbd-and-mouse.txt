@@ -1,10 +1,10 @@
-it looks like sometimes pairing a bluetooth keyboard and mouse via the gui
-tools does not always work - this is the procedure to do it via cmdline and
-to save it, so that the paring will happen again automatically (that can
-take a moment) after bootup - tested on a samsung gt510 (galaxy tab a 9.7
-lte) with a bt keyboard and mouse
+It looks like sometimes pairing a Bluetooth keyboard and mouse via the gui
+tools does not always work - This is the procedure to do it via cmdline and
+to save it, so that the pairing will happen again automatically (Which can
+take a moment) after bootup - tested on a Samsung gt510 (galaxy tab a 9.7
+lte) with a BT keyboard and mouse.
 
-based on: https://www.linuxquestions.org/questions/blog/isaackuo-112178/simple-bluetooth-keyboard-how-to-37550/
+Based on: https://www.linuxquestions.org/questions/blog/isaackuo-112178/simple-bluetooth-keyboard-how-to-37550/
 
 bluetoothctl
 remove 20:20:05:15:7F:CE (mac address of the kdb in case it is already somehow connected)
@@ -15,9 +15,9 @@ connect 20:20:05:15:7F:CE
 trust 20:20:05:15:7F:CE (this is important to keep it over reboots)
 quit
 
-important: /etc/bluetooth/main.conf -> “AutoEnable = true”
+Important: /etc/bluetooth/main.conf -> “AutoEnable = true”
 
-full log from website above:
+Full log from website above:
 root@rapunzel:~# bluetoothctl -a
 [NEW] Controller 74:F0:6D:EA:D2:14 rapunzel [default]
 [NEW] Device 00:1F:20:91:C7:8C Logitech K810
@@ -63,4 +63,4 @@ Agent unregistered
 [DEL] Controller 74:F0:6D:EA:D2:14 ariel [default]
 root@rapunzel:~#
 
-bluetooth mouse: same procedure as above
+Bluetooth mouse: Same procedure as above
