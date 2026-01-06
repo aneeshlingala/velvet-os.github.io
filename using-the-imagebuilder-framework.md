@@ -1,6 +1,10 @@
-# using the imagebuilder framework
+# Using the imagebuilder framework:
 
 IMPORTANT NOTE: this document is just the beginning and will hopefully get better over time :)
+
+Before you start, if you are trying to install a newer kernel, best practice is to
+build a new image, but if you want to install a newer kernel onto an existing system,
+use [this](./chromebooks/kernel/installing-a-newer-kernel.md) guide.
 
 ## requirements and preparations
 
